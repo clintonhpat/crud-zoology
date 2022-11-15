@@ -126,7 +126,7 @@ centered
 
             <Col sm={6}>
                 <Image width="200px" height="200px" src={this.imagesrc}/>
-                <input onChnage={this.handleFileSelected} type="File"/>
+                <input onChange={this.handleFileSelected} type="File"/>
             </Col>
         </Row>
     </Modal.Body>
