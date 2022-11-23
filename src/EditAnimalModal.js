@@ -9,8 +9,8 @@ export class EditAnimalModal extends Component{
         this.handleFileSelected=this.handleFileSelected.bind(this);
     }
 
-    photofilename = "anonymous.jpg";
-    imagesrc = process.env.REACT_APP_PHOTOPATH+this.photofilename;
+    photoofanimal = "anonymous.jpg";
+    imagesrc = process.env.REACT_APP_PHOTOPATH+this.photoofanimal;
 
     componentDidMount(){
         fetch(process.env.REACT_APP_API+'AnimalClass')
@@ -33,7 +33,7 @@ export class EditAnimalModal extends Component{
                 AnimalName:event.target.AnimalName.value,
                 AnimalClass:event.target.AnimalClass.value,
                 DateOfListing:event.target.DateOfListing.value,
-                PhotoFileName:this.photofilename
+                PhotoOfAnimal:this.photoofanimal
             })
         })
         .then(res=>res.json())
@@ -48,7 +48,7 @@ export class EditAnimalModal extends Component{
 
     handleFileSelected(event){
         event.preventDefault();
-        this.photofilename=event.target.files[0].name;
+        this.photoofanimal=event.target.files[0].name;
         const formData = new FormData();
         formData.append(
             "myFile",
@@ -135,7 +135,7 @@ centered
 
             <Col sm={6}>
                 <Image width="200px" height="200px" 
-                src={process.env.REACT_APP_PHOTOPATH+this.props.photofilename}/>
+                src={process.env.REACT_APP_PHOTOPATH+this.props.photoofanimal}/>
                 <input onChange={this.handleFileSelected} type="File"/>
             </Col>
         </Row>
