@@ -39,7 +39,7 @@ export class Animal extends Component{
         }
     }
     render(){
-        const {anims, animid,animname,animclass,photofilename,dol}=this.state;
+        const {anims, animid,animname,animclass,photoofanimal,dol}=this.state;
         let addModalClose=()=>this.setState({addModalShow:false});
         let editModalClose=()=>this.setState({editModalShow:false});
         let viewModalClose=()=>this.setState({viewModalShow:false});
@@ -67,7 +67,7 @@ export class Animal extends Component{
     <Button className="mr-2 me-1" variant="info"
     onClick={()=>this.setState({editModalShow:true,
         animid:anim.AnimalId,animname:anim.AnimalName,animclass:anim.AnimalClass,
-        photofilename:anim.PhotoFileName,dol:anim.DateOfListing})}>
+        photoofanimal:anim.PhotoOfAnimal,dol:anim.DateOfListing})}>
             Edit
         </Button>
 
@@ -79,7 +79,7 @@ export class Animal extends Component{
         <Button className="mr-2" variant="warning"
     onClick={()=>this.setState({viewModalShow:true,
         animid:anim.AnimalId,animname:anim.AnimalName,animclass:anim.AnimalClass,
-        photofilename:anim.PhotoFileName,dol:anim.DateOfListing})}>
+        photoofanimal:anim.PhotoOfAnimal,dol:anim.DateOfListing})}>
             View
         </Button>
 
@@ -88,7 +88,7 @@ export class Animal extends Component{
         animid={animid}
         animname={animname}
         animclass={animclass}
-        photofilename={photofilename}
+        photoofanimal={photoofanimal}
         dol={dol}
         />
 
@@ -97,7 +97,7 @@ export class Animal extends Component{
         animid={animid}
         animname={animname}
         animclass={animclass}
-        photofilename={photofilename}
+        photoofanimal={photoofanimal}
         dol={dol}
         />
 </ButtonToolbar>
