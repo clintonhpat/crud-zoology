@@ -1,6 +1,6 @@
 ## CRUD Zoology
 
-An application that allows users to add their favorite animals and their respective classes into a database. This repository serves as the front-end and was built with React, JavaScript, and CSS.
+An application that allows users to add their favorite animals and their respective classes into a SQL database. This repository serves as the front-end and was built with React, JavaScript, and CSS.
 
 ## Project Screen Shot(s) 
 
