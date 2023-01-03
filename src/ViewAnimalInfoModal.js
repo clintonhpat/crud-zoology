@@ -107,7 +107,7 @@ centered
 
                     <Form.Group controlId="AnimalClass">
                         <Form.Label>Animal Class</Form.Label>
-                        <Form.Control as="select" defaultValue={this.props.depmt} disabled>
+                        <Form.Control as="select" defaultValue={this.props.animclass} disabled>
                         {this.state.deps.map(dep=>
                             <option key={dep.AnimalClassId}>{dep.AnimalClassName}</option>)}
                         </Form.Control>
